@@ -622,26 +622,23 @@ form .btn2:hover {
   }
 
   .about {
-    width: 100%; /* Atur lebar sesuai kebutuhan */
-    height: 100%;
-    text-align: left; /* Sesuaikan alignment teks */
+    height: 100%; /* Mengubah ketinggian menjadi otomatis */
+    flex-direction: column; /* Tata letak kolom di tampilan tablet */
+    text-align: left; /* Menyesuaikan alignment teks */
+  }
+
+  .about img,
+  .about p.text {
+    width: 100%; /* Lebar penuh pada tablet */
+     /* Menghapus margin di tablet */
+    font-size: large;
     text-align: justify;
-    flex-wrap: wrap;
-    flex-direction: column;
+    /* margin-bottom: 150px; */
   }
 
   .about img {
-    display: inline-block;
-    vertical-align: left; /* Optional: Sesuaikan vertical alignment */
-    width: 200px; /* Sesuaikan lebar gambar */
-    height: auto;
-    margin: 0px 20px 20px 10;
-  }
-
-  .about p.text {
-    display: inline-block;
-    vertical-align: left; /* Optional: Sesuaikan vertical alignment */
-    width: calc(100% - 200px);
+    /* Mengatur margin bawah gambar di tablet */
+    margin-bottom: 2px;
   }
 
   .service-list div {
@@ -659,24 +656,19 @@ form .btn2:hover {
       text-align: center; /* Center align content */
     }
     .about {
-      width: 100%; /* Atur lebar sesuai kebutuhan */
-      height: 100%;
-      text-align: left; /* Sesuaikan alignment teks */
-      /* text-align: justify; */
-      flex-direction: column;
+      height: auto; /* Mengubah ketinggian menjadi otomatis */
+      flex-direction: column; /* Tata letak kolom di tampilan tablet */
+      text-align: left; /* Menyesuaikan alignment teks */
     }
-
-    .about img {
-      display: inline-block;
-      vertical-align: left; /* Optional: Sesuaikan vertical alignment */
-      width: 250px; /* Sesuaikan lebar gambar */
-      height: auto;
-    }
-
+  
+    .about img,
     .about p.text {
-      width: 100%;
-      display: inline-block;
-      text-align: justify;
+      width: 100%; /* Lebar penuh pada tablet */
+      margin: 0; /* Menghapus margin di tablet */
+    }
+  
+    .about img {
+      margin: 0 0 20px; /* Mengatur margin bawah gambar di tablet */
     }
 
     .service-list div {
