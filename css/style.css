@@ -1,0 +1,699 @@
+:root {
+  --primary: #d8fa15;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 2000px;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 1.3rem;
+  font-weight: 650;
+  color: var(--primary);
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  padding: 1.3em 3em;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 700;
+  color: #000;
+  background: #ffffff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.navbar .navbar-nav a:hover {
+  background-color: #d8fa15;
+  box-shadow: 0px 15px 20px rgba(50, 217, 61, 0.4);
+  color: #000;
+  transform: translateY(-7px);
+}
+button:active {
+  transform: translateY(-1px);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#menu {
+  display: none;
+}
+
+/* Hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/oke-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.hero .content {
+  padding: 1rem 10% 9rem;
+  max-width: 89rem;
+  overflow: auto;
+}
+
+.hero .content h1 {
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: normal;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 0.1px;
+}
+
+.hero .content p span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.9rem;
+  margin-top: 0.2rem;
+  line-height: normal;
+  font-weight: 550;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  text-align: left;
+  letter-spacing: normal; /* Atur jarak horizontal di sini */
+}
+
+.hero .content .yup {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  border-right: 3px solid rgba(255, 255, 255, 0.993);
+  animation: typing 5s steps(37) 1s infinite both, cursor 3s infinite;
+}
+
+@keyframes cursor {
+  0%,
+  100% {
+    border-color: rgb(255, 255, 255);
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+.text-container {
+  padding: 3rem 0.2% 3rem;
+  display: flex;
+  flex-direction: column; /* Mengatur elemen <h1> di atas <p> */
+  letter-spacing: normal;
+  white-space: nowrap;
+}
+
+.text-container .span {
+  color: #d8fa15;
+}
+
+.gambar-kecil {
+  padding: 3rem 0.2% 1rem;
+  max-width: 80%; /* Atur persentase yang sesuai dengan kebutuhan Anda */
+  height: auto; /* Biarkan tinggi gambar menyesuaikan agar tidak terdistorsi */
+  float: left;
+  margin: 0px 20px 20px 0;
+}
+
+.hero .content {
+  display: flex; /* Menggunakan display flex untuk mengatur gambar dan teks dalam satu baris */
+  align-items: center; /* Mengatur vertical alignment agar gambar dan teks berada pada tengah-tengah */
+  gap: 1px; /* Mengatur jarak antara gambar dan teks */
+  margin-right: 1px;
+  margin-left: 350px;
+}
+
+.da {
+  padding: 8rem 7% 1.4rem;
+}
+
+.da h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+}
+
+.da h2 span {
+  color: var(--primary);
+}
+
+/* about me start */
+.about {
+  overflow: hidden;
+  background: #222;
+  color: floralwhite;
+  text-align: center;
+  width: 100%;
+  height: 350px;
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc; /* Atur ketebalan dan warna border */
+  border-radius: 1.2rem;
+  margin: 2rem;
+}
+.about {
+  width: 100%; /* Atur lebar sesuai kebutuhan */
+  text-align: left; /* Sesuaikan alignment teks */
+  text-align: justify;
+}
+
+.about img {
+  display: inline-block;
+  vertical-align: left; /* Optional: Sesuaikan vertical alignment */
+  width: 350px; /* Sesuaikan lebar gambar */
+  height: auto;
+  margin: 0px 20px 20px 0;
+}
+
+.about p.text {
+  display: inline-block;
+  vertical-align: left; /* Optional: Sesuaikan vertical alignment */
+  width: calc(
+    100% - 250px
+  ); /* Sesuaikan width teks setelah dikurangi lebar gambar */
+  /* margin-left: 1px;  */
+  /* Jarak antara gambar dan teks */
+}
+
+/* about me start */
+
+/* card*/
+.dc {
+  padding: 7rem 2% 1.4rem;
+}
+.product {
+  overflow: hidden;
+  background: #222;
+  color: floralwhite;
+  text-align: center;
+  width: 300px;
+  height: 350px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2rem;
+  transition: all 0.2s; /* Transisi umum untuk semua perubahan */
+
+  /* border: 1px solid #ccc; Atur ketebalan dan warna border */
+  margin: 2rem;
+}
+
+.product .product-price {
+  font-size: 18px;
+}
+
+.product img {
+  border-radius: 1.2rem;
+}
+
+.product-btn {
+  position: relative;
+  top: 20px; /* Atur sesuai dengan pergeseran yang Anda inginkan */
+}
+
+svg.done {
+  width: 80px; /* Atur ukuran lebar sesuai keinginan Anda */
+  height: 80px; /* Atur ukuran tinggi sesuai keinginan Anda */
+  margin-bottom: 20px;
+}
+
+.product:hover {
+  box-shadow: rgb(5, 240, 36) 0px 20px 30px -10px;
+  transform: scale(1.1);
+}
+
+.product img {
+  height: 100px;
+  margin: 1rem;
+  transition: all 0.3s;
+}
+
+.product a:link,
+.product a:visited {
+  color: #000;
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--primary);
+  padding: 0.5rem 3rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.dc .warpper {
+  display: flex;
+  flex-wrap: wrap; /* Ini memungkinkan produk berada dalam beberapa baris jika ukurannya tidak cukup */
+  justify-content: center; /* Tengahkan horizontal */
+  align-items: center;
+}
+
+.product a:hover {
+  transform: scale(1.1);
+}
+
+/* card end*/
+
+/* Article start */
+#service {
+  padding: 30px 0;
+}
+
+.container h1 {
+  padding: 7rem 2% 1.4rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.container span {
+  color: #d8fa15;
+}
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+  
+}
+
+
+.service-list .jj {
+  transition: all 0.9s; /* Transisi umum untuk semua perubahan */
+}
+
+.service-list div {
+  background-color: #262626;
+  width: 35%;
+  border-radius: 1.5rem;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 300;
+  border-right: 10px;
+  transition: 0.3s;
+  transition: 0.5s;
+  /* max-width: 250px; */
+}
+
+.service-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: 16px;
+}
+
+.service-list div h2 {
+  font-size: 20px;
+  font-weight: 500px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.service-list div a {
+  background-color: black;
+  width: 35%;
+  border-radius: 1.5rem;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  align-items: center;
+  color: var(--primary);
+  font-size: 18px;
+  margin-top: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.service-list div:hover {
+  transform: translateY(-10px);
+  background-color: #d8fa15;
+  box-shadow: 0px 15px 20px rgba(50, 217, 61, 0.4);
+  color: #000;
+  transform: translateY(-7px);
+}
+.service-list a:hover {
+  transform: translateY(-10px);
+  background-color: #141414;
+  box-shadow: 0px 15px 20px rgba(8, 8, 8, 0.4);
+  color: white;
+  transform: translateY(-7px);
+}
+/* Article end */
+
+/* Contact Start */
+.contact-left h1 {
+  text-align: center;
+}
+
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+.contact-left h1 span {
+  color: #d8fa15;
+}
+.contact-left h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 500;
+  padding: 7rem 2% 1.4rem;
+}
+.contact-left p i {
+  color: var(--primary);
+  margin-right: 15px;
+  font-size: 25px;
+}
+.social-icons {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  /* transition: all 0.2s; */
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #d8fa15;
+  transform: translateY(-5px);
+}
+.btn.btn2 {
+  display: inline-block;
+  background: #d8fa15;
+  border-radius: 1rem;
+  font-weight: 500;
+}
+.btn.btn3 {
+  background: #d8fa15;
+  border-radius: 1rem;
+  width: 10rem; /* Atur diameter tombol lingkaran */
+  height: 2.5rem; /* Atur diameter tombol lingkaran */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: all 0.9s; /* Transisi umum untuk semua perubahan */
+  font-weight: 500;
+}
+
+.btn.btn3:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+.contact-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #1d1d1d;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+form .btn2 {
+  padding: 10px 60px;
+  font-size: 17px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.9s; /* Transisi umum untuk semua perubahan */
+}
+form .btn2:hover {
+  /* transform: scale(1.1); */
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+/* Contact end */
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+/* Tablet */
+@media (max-width: 1000px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 3.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .gambar-kecil {
+    max-width: 100%; /* Make the image responsive by limiting its width */
+    height: auto; /* Maintain aspect ratio */
+    min-width: 100%;
+    width: auto;
+    margin-top: 1rem;
+  }
+
+  .hero {
+    /* padding: 60px 20px;  */
+    /* Adjust padding for smaller screens */
+    align-items: center;
+    object-fit: cover;
+    object-position: center;
+    mix-blend-mode: difference;
+  }
+
+  .hero .content {
+    padding: 1rem 21%;
+    text-align: center; /* Center align content */
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  .hero .content h1 {
+    font-size: 1.5em; /* Adjust font size for smaller screens */
+    margin-bottom: 3px;
+    box-sizing: border-box;
+  }
+
+  .hero .content .yupp {
+    white-space: normal; /* Allow text to wrap */
+    border-right: none; /* Remove border-right effect */
+    animation: none; /* Remove typing animation */
+    text-align: center;
+    /* margin-top: 190px; */
+  }
+
+  .hero .content .yup {
+    white-space: normal; /* Allow text to wrap */
+    border-right: none; /* Remove border-right effect */
+    animation: none; /* Remove typing animation */
+    text-align: center;
+    margin-bottom: none;
+  }
+
+  .text-container {
+    padding: 1rem 5%; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+
+  .gambar-kecil {
+    padding: 1rem 5% 1rem; /* Adjust padding for smaller screens */
+    max-width: 100%; /* Make image responsive */
+    float: none; /* Remove float to center the image */
+    margin: 10px auto 1rem; /* Center align the image */
+    min-width: 100%;
+  }
+
+  .hero .content {
+    flex-direction: column;
+    margin: 0;
+    display: flex; /* Menggunakan display flex untuk mengatur gambar dan teks dalam satu baris */
+    align-items: center; /* Mengatur vertical alignment agar gambar dan teks berada pada tengah-tengah */
+    gap: 1px; /* Mengatur jarak antara gambar dan teks */
+  }
+
+  .about {
+    width: 100%; /* Atur lebar sesuai kebutuhan */
+    height: 100%;
+    text-align: left; /* Sesuaikan alignment teks */
+    text-align: justify;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .about img {
+    display: inline-block;
+    vertical-align: left; /* Optional: Sesuaikan vertical alignment */
+    width: 200px; /* Sesuaikan lebar gambar */
+    height: auto;
+    margin: 0px 20px 20px 10;
+  }
+
+  .about p.text {
+    display: inline-block;
+    vertical-align: left; /* Optional: Sesuaikan vertical alignment */
+    width: calc(100% - 200px);
+  }
+
+  .service-list div {
+    width: 100%; /* Menggunakan lebar 100% pada layar lebih kecil */
+    max-width: none; /* Menghapus pembatasan max-width */
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    html {
+      font-size: 55%;
+    }
+
+    .hero .content {
+      padding: 1rem 1%;
+      text-align: center; /* Center align content */
+    }
+    .about {
+      width: 100%; /* Atur lebar sesuai kebutuhan */
+      height: 100%;
+      text-align: left; /* Sesuaikan alignment teks */
+      /* text-align: justify; */
+      flex-direction: column;
+    }
+
+    .about img {
+      display: inline-block;
+      vertical-align: left; /* Optional: Sesuaikan vertical alignment */
+      width: 250px; /* Sesuaikan lebar gambar */
+      height: auto;
+    }
+
+    .about p.text {
+      width: 100%;
+      display: inline-block;
+      text-align: justify;
+    }
+
+    .service-list div {
+      width: 100%; /* Menggunakan lebar 100% pada layar lebih kecil */
+      max-width: none; /* Menghapus pembatasan max-width */
+  }
+
+  /* Gaya untuk animasi teks diketik */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  /* Gaya untuk menghilangkan kursor teks */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
