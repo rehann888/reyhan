@@ -318,6 +318,7 @@ svg.done {
   flex-wrap: wrap; /* Ini memungkinkan produk berada dalam beberapa baris jika ukurannya tidak cukup */
   justify-content: center; /* Tengahkan horizontal */
   align-items: center;
+  justify-content: center;
 }
 
 .product a:hover {
@@ -329,6 +330,8 @@ svg.done {
 /* Article start */
 #service {
   padding: 30px 0;
+  align-items: center;
+  text-align: center;
 }
 
 .container h1 {
