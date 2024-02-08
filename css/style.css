@@ -205,6 +205,78 @@ button:active {
   color: var(--primary);
 }
 
+/* Skilss */
+
+.skills {
+  padding: 8rem 7% 1.4rem;
+}
+
+.skills h2 span {
+  color: var(--primary);
+}
+
+.skill-content {
+  width: 100%;
+  border: transparent;
+  margin: 30px auto;
+  padding: 5px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-item {
+  display: flex; /* Menggunakan flexbox untuk mengatur posisi gambar dan teks */
+  width: 150px; /* Lebar kotak */
+  height: 70px; /* Tinggi kotak */
+  margin: 10px; /* Jarak antara kotak */
+  align-items: center;
+  background: #222;
+  border: transparent; /* Garis tepi kotak */
+  padding: 5px; /* Ruang di dalam kotak */
+  border-radius: 10px;
+  justify-content: center;
+  text-align: center;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+
+.options button {
+  width: 150px; /* Lebar kotak */
+  height: 50px; /* Tinggi kotak */
+  padding: 8px 16px;
+  margin: 4px;
+  background-color: #222;
+  border: 2px solid #ffffff; /* Garis tepi kotak */
+  border-radius: 10px;
+}
+
+.oke {
+  color: white; /* Warna teks menjadi putih */
+}
+
+.options .oke.active {
+  background-color: var(--primary); /* Misalnya, warna biru muda */
+  color: #000; /* Warna teks putih */
+}
+
+/* Skills */
+
 /* about me start */
 .about {
   overflow: hidden;
@@ -350,9 +422,7 @@ svg.done {
   grid-gap: 40px;
   margin-top: 50px;
   width: 70%;
-  
 }
-
 
 .service-list .jj {
   transition: all 0.9s; /* Transisi umum untuk semua perubahan */
@@ -398,7 +468,7 @@ svg.done {
   margin-bottom: 10px;
 }
 
-.service-list div a.jj{
+.service-list div a.jj {
   margin: 20px 0px 10px;
   padding: 10px;
 }
@@ -523,10 +593,6 @@ form .btn2:hover {
 
 /* Contact end */
 
-
-
-
-
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {
@@ -642,7 +708,7 @@ form .btn2:hover {
   .about img,
   .about p.text {
     width: 100%; /* Lebar penuh pada tablet */
-     /* Menghapus margin di tablet */
+    /* Menghapus margin di tablet */
     font-size: large;
     text-align: justify;
     /* margin-bottom: 150px; */
@@ -656,9 +722,7 @@ form .btn2:hover {
   .service-list div {
     width: 145%; /* Menggunakan lebar 100% pada layar lebih kecil */
     max-width: none; /* Menghapus pembatasan max-width */
-    
   }
-
 
   /* Mobile */
   @media (max-width: 480px) {
@@ -675,30 +739,41 @@ form .btn2:hover {
       flex-direction: column; /* Tata letak kolom di tampilan tablet */
       text-align: center; /* Menyesuaikan alignment teks */
     }
-  
+
     .about img,
     .about p.text {
       width: 100%; /* Lebar penuh pada tablet */
       margin: 0; /* Menghapus margin di tablet */
     }
-  
+
     .about img {
       margin: 0 0 20px; /* Mengatur margin bawah gambar di tablet */
     }
 
-
-  
-
-  /* Gaya untuk animasi teks diketik */
-  @keyframes typing {
-    from {
-      width: 0;
+    .image-list {
+      justify-content: center; /* Pusatkan item pada layar yang lebih besar */
+      font-size: medium;
+      display: flex;
     }
   }
 
-  /* Gaya untuk menghilangkan kursor teks */
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
+  .image-item {
+    width: calc(
+      50% - 20px
+    ); /* Mengatur lebar untuk dua kotak pada satu baris */
   }
+}
+
+/* Gaya untuk animasi teks diketik */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* Gaya untuk menghilangkan kursor teks */
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}

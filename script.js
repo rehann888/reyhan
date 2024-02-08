@@ -2,7 +2,7 @@ const navbarNav = document.querySelector(".navbar-nav");
 const menuLinks = navbarNav.querySelectorAll("a"); // Ambil semua tautan menu
 
 // Ketika tautan menu di klik
-menuLinks.forEach(link => {
+menuLinks.forEach((link) => {
   link.onclick = () => {
     navbarNav.classList.remove("active"); // Tutup menu hamburger
   };
@@ -28,3 +28,40 @@ menuLink.onclick = (event) => {
 navbarNav.addEventListener("click", (event) => {
   event.stopPropagation(); // Mencegah penyebaran event ke atas (dokumen)
 });
+
+function showTechStack() {
+  document.getElementById("techStack").style.display = "block";
+  document.getElementById("tools").style.display = "none";
+  document.querySelector(".options .oke.active").classList.remove("active");
+  document.querySelector(".options .oke:nth-child(1)").classList.add("active");
+}
+
+function showTools() {
+  document.getElementById("techStack").style.display = "none";
+  document.getElementById("tools").style.display = "block";
+  document.querySelector(".options .oke.active").classList.remove("active");
+  document.querySelector(".options .oke:nth-child(2)").classList.add("active");
+}
+
+// Menambahkan kelas active ke button Tech Stack saat halaman dimuat
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelector(".options .oke:nth-child(1)").classList.add("active");
+});
+
+function showTechStack() {
+  document.getElementById("techStack").style.display = "block";
+  document.getElementById("tools").style.display = "none";
+
+  // Menghapus kelas active dari button sebelumnya dan menambahkannya ke button Tech Stack
+  document.querySelector(".options .oke.active").classList.remove("active");
+  document.querySelector(".options .oke:nth-child(1)").classList.add("active");
+}
+
+function showTools() {
+  document.getElementById("techStack").style.display = "none";
+  document.getElementById("tools").style.display = "block";
+
+  // Menghapus kelas active dari button sebelumnya dan menambahkannya ke button Tools
+  document.querySelector(".options .oke.active").classList.remove("active");
+  document.querySelector(".options .oke:nth-child(2)").classList.add("active");
+}
